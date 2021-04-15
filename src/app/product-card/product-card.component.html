@@ -1,1 +1,14 @@
-<p>product-card works!</p>
+<!-- <div class="card__card-wrapper">
+    <h2>{{product.Name}}</h2>
+    <img src="{{product.ProductPicUrl}}" alt="">
+    <h3>{{product.Price}}{{product.CurrencyCode}}</h3>
+</div> -->
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{product.ProductPicUrl}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{product.Name}}</h5>
+      <p class="card-text">{{product.Description}}</p>
+      <h3>{{product.Price}}{{product.CurrencyCode}} <span class="our-cart"><a href="#"><fa-icon [icon]="cartIcon"></fa-icon></a></span></h3>
+      
+    </div>
+  </div>
