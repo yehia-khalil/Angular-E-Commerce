@@ -23,3 +23,26 @@ h2 {
 .btn {
   font-weight: 500;
 }
+
+.loading-img {
+  padding: 0 50px 50px 50px;
+}
+
+.load-img {
+  background-color: rgba(204, 200, 200, 0.616);
+  height: 100%;
+  width: 85%;
+}
+
+.loading-tmp {
+  background-color: rgba(204, 200, 200, 0.295);
+  height: 25px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.loading-tmp.lt {
+  width: 40%;
+  height: 35px;
+  margin-top: 0;
+}

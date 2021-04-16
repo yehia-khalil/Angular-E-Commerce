@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { product } from '../Model/product.model';
 import { ServiceService } from '../services/service.service';
-import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-product-page',
@@ -13,7 +12,6 @@ import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 export class ProductPageComponent implements OnInit, OnDestroy {
   private _routeParamSub: Subscription;
   product: product;
-  cartIcon = faCartPlus;
 
   constructor(
     private _productService: ServiceService,
