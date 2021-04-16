@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -18,9 +19,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,FontAwesomeModule
-
-
+    HttpClientModule,
+    FontAwesomeModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

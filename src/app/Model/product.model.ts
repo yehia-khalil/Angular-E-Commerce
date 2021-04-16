@@ -5,15 +5,15 @@ export interface product{
     Description: String
     MainCategory: String
     Name: String
-    Price: BigInteger
+    Price: Number
     ProductId: String
     ProductPicUrl: String
-    Quantity: BigInteger
+    Quantity: Number
     Status: String
     SupplierName: String
     TaxTarifCode: String
     UoM: String
-    WeightMeasure: BigInteger
+    WeightMeasure: Number
     WeightUnit: String
-    Width: BigInteger
+    Width: Number
 }

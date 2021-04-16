@@ -1,3 +1,6 @@
 <div class="our_wrapper">
     <app-product-card *ngFor="let thisProduct of products" [product]="thisProduct"></app-product-card>
+    <span *ngFor="let item of fakeArray | paginate: { itemsPerPage: 10, currentPage: p }"></span>
 </div>
+
+  <pagination-controls (pageChange)="getPage(p = $event)"></pagination-controls>

@@ -12,4 +12,9 @@ export class ServiceService {
   getProducts(){
     return this._http.get(environment.url);
   }
+
+
+  getPage(params){
+    return this._http.get(environment.url+`?page=${params}`);
+  }
 }
