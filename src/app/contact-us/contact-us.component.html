@@ -1,0 +1,79 @@
+<div class="container">
+
+    <div class="row" *ngIf="errors?.length">
+        <div class="alert alert-danger" *ngFor="let error of errors">
+          {{ error }}
+        </div>
+      </div>
+
+      
+    <div class="row" >
+        <section class="mb-4">  
+            <h2 class=" font-weight-bold text-center mt-4">Contact us</h2>
+            <p class="text-center mt-4">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+            a matter of hours to help you.</p>
+        </section>
+    </div> 
+            
+     <form [formGroup]="contactUsForm" (ngSubmit)="onSubmit(contactUsForm)">
+        <div class="row"style="margin-left: 100px;">            
+            <div class="col-md-6">
+                <div class="md-form mb-0">
+                    <span>*</span>
+                    <input type="text" class="form-control inputborder" placeholder="Your Name" formControlName="name">
+                    <div class="alert alert-danger p-1 mt-1" *ngIf="contactUsForm.get('name').dirty && contactUsForm.get('name').hasError('required')">
+                        Name is required.</div>   
+                            
+                </div>
+            </div>
+                   
+            <div class="col-md-6">
+                <div class="md-form mb-0 ml-3">
+                    <span>*</span>
+                    <input type="text"  class="form-control inputborder" placeholder="Your email" formControlName="email">
+                    <div class="alert alert-danger p-1 mt-1" *ngIf="contactUsForm.get('email').dirty && contactUsForm.get('email').hasError('required')">
+                        Email is required.</div>  
+                    <div class="alert alert-danger p-1 mt-1" *ngIf="contactUsForm.get('email').dirty && contactUsForm.get('email').hasError('email')">
+                        Invalid Email.</div>    
+                </div>
+                
+            </div>
+            
+                    
+        </div>
+                
+        <div class="row" style="margin-left: 100px;">
+            <div class="col-md-12">
+                <div class="md-form mb-0 mt-4">
+                    <span>*</span>
+                    <input type="text"  class="form-control inputborder" placeholder="Subject" formControlName="subject" >
+                    <div class="alert alert-danger p-1 mt-1" *ngIf="contactUsForm.get('subject').dirty && contactUsForm.get('subject').hasError('required')">
+                        Subject is required.</div>   
+                            
+                </div>
+            </div>
+        </div>
+                
+        <div class="row" style="margin-left: 100px;">
+            <div class="col-md-12">
+                <div class="md-form mt-4">
+                        <span>*</span>
+                        <textarea type="text"  rows="2" class="form-control md-textarea inputborder" placeholder="Your message" formControlName="message"></textarea>
+                        <div class="alert alert-danger p-1 mt-1" *ngIf="contactUsForm.get('message').dirty && contactUsForm.get('message').hasError('required')">
+                            Message is required.</div>    
+                </div>
+
+            </div>
+        </div>
+                
+        <div class="text-center text-md-left mt-4">
+            <button class="btn " 
+            [ngClass]="{
+              'btn-primary': contactUsForm.valid,
+              'btn-default': contactUsForm.invalid
+            }"
+            type="submit"
+            [disabled]="contactUsForm.invalid">Send</button>
+        </div>
+        </form>
+</div>
