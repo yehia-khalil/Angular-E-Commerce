@@ -24,14 +24,13 @@
       <h3>
         {{ product.Price }} {{ product.CurrencyCode }}
         <span class="our-cart"
-          ><a href="#">
-            <fa-icon [icon]="cartIcon"></fa-icon> </a
+          ><a href="#"> <fa-icon [icon]="cartIcon"></fa-icon> </a
         ></span>
       </h3>
       <button
         type="button"
         class="btn btn-primary btn-lg btn-block"
-        routerLink="{{ product.ProductId }}"
+        [routerLink]="['/products', product.ProductId]"
       >
         View Product
       </button>
