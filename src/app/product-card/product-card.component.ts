@@ -11,12 +11,9 @@ export class ProductCardComponent implements OnInit {
   @Input() product;
 
   constructor() { }
-
+  
   ngOnInit(): void {
+    
   }
   cartIcon = faCartPlus;
-
- 
-
-
 }

@@ -1,0 +1,25 @@
+h2 {
+  font-weight: 800;
+}
+
+.available span {
+  color: aliceblue;
+  background-color: rgba(18, 114, 18, 0.788);
+  padding: 0.4rem 1.1rem;
+  border-radius: 3px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.not-available span {
+  color: aliceblue;
+  background-color: rgba(211, 66, 66, 0.863);
+  padding: 0.4rem 1.1rem;
+  border-radius: 3px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.btn {
+  font-weight: 500;
+}

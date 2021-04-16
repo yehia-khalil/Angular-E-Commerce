@@ -10,6 +10,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { NgxPaginationModule } from 'ngx-pagination';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     ProductCardComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ProductPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,79 @@
+<div class="container h-100" *ngIf="product; else loadingTemplate">
+  <div class="row my-5">
+    <div class="col-6 d-flex justify-content-center">
+      <img
+        src="{{ product.ProductPicUrl }}"
+        alt="{{ product.Name }}"
+        class="product-image w-100"
+      />
+    </div>
+    <div class="col-6">
+      <div class="pl-2">
+        <div class="row mt-4">
+          <h2>{{ product.Name }}</h2>
+        </div>
+        <div class="row mb-1">
+          <h4>{{ product.SupplierName }}</h4>
+        </div>
+        <div class="row mb-1">
+          <h5 class="text-danger">
+            {{ product.Price }} {{ product.CurrencyCode }}
+          </h5>
+        </div>
+        <div class="row">
+          <span>Description: {{ product.Description }}</span>
+        </div>
+        <div class="row">
+          <span
+            >Dimensions: {{ product.Width }}x{{ product.Depth }}x{{
+              product.Height
+            }}
+            {{ product.DimUnit }}</span
+          >
+        </div>
+        <div class="row">
+          <span
+            >Weight: {{ product.WeightMeasure }}{{ product.WeightUnit }}</span
+          >
+        </div>
+        <div
+          class="row"
+          [ngClass]="{
+            available: product.Status === 'Available',
+            'not-available': product.Status !== 'Available'
+          }"
+        >
+          <span>
+            {{ product.Status }}
+          </span>
+        </div>
+        <div class="row purchase-controls">
+          <div class="col-4 p-0 my-3">
+            <input
+              type="number"
+              class="w-100"
+              max="{{ product.Quantity }}"
+              min="1"
+              [disabled]="product.Status !== 'Available'"
+              placeholder="Quantity"
+            />
+          </div>
+          <div
+            class="col-2 d-flex justify-content-start align-items-center"
+          ></div>
+          <div class="col-6 d-flex justify-content-center align-items-center">
+            <button
+              class="btn btn-outline-success"
+              [disabled]="product.Status !== 'Available'"
+              id="{{ product.ProductId }}"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #loadingTemplate>Loading...</ng-template>
