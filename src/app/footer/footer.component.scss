@@ -1,3 +1,26 @@
 footer {
   bottom: 0;
+  position: relative;
+  padding: 25px;
+  background-color: #e1e7ee67 !important;
+}
+
+.col {
+  padding: 0;
+}
+
+.footer-bottom a {
+  color: #333;
+}
+
+span {
+  font-weight: 600;
+}
+
+.btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 25px;
+  margin-right: 30px;
 }
