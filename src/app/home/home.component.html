@@ -1,6 +1,17 @@
 <div class="our_wrapper">
-    <app-product-card *ngFor="let thisProduct of products" [product]="thisProduct"></app-product-card>
-    <span *ngFor="let item of fakeArray | paginate: { itemsPerPage: 10, currentPage: p }"></span>
+  
+  <div class="input-group d-flex justify-content-end" style="padding: 10px">
+    <div >
+      <label class="form-label" for="form1">Search</label>
+      <input type="text" id="form1" [(ngModel)]="term" class="searchTerm" />  
+    </div>
+    <button type="button" class="btn btn-primary btn-sm">
+      <i class="fas fa-search "></i>
+    </button>
+  </div>
+
+  <app-product-card *ngFor="let thisProduct of products | filter:term" [product]="thisProduct"></app-product-card>
+  <span *ngFor="let item of fakeArray | paginate: { itemsPerPage: 10, currentPage: p }"></span>
 </div>
 
   <pagination-controls (pageChange)="getPage(p = $event)"></pagination-controls>

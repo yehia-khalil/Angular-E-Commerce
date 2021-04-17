@@ -13,6 +13,9 @@ export class HomeComponent implements OnInit {
   pages;
   p:number;
   fakeArray;
+  searchTerm: string;
+  term: string;
+
   constructor(private http: ServiceService) { }
 
   ngOnInit(): void {
