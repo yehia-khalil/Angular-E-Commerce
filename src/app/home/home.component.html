@@ -14,4 +14,4 @@
   <span *ngFor="let item of fakeArray | paginate: { itemsPerPage: 10, currentPage: p }"></span>
 </div>
 
-  <pagination-controls (pageChange)="getPage(p = $event)"></pagination-controls>
+  <pagination-controls (pageChange)="getPage(p = $event)" class="d-flex flex-row justify-content-center"></pagination-controls>
