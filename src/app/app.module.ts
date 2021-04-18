@@ -14,6 +14,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     HeaderComponent,
     FooterComponent,
     ProductPageComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

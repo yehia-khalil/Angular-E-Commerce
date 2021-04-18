@@ -24,7 +24,7 @@
       <h3>
         {{ product.Price }} {{ product.CurrencyCode }}
         <span class="our-cart"
-          ><a href="#"> <fa-icon [icon]="cartIcon"></fa-icon> </a
+          ><a href="#"> <fa-icon [icon]="cartIcon" (click)="addToCart(product)"></fa-icon> </a
         ></span>
       </h3>
       <button
