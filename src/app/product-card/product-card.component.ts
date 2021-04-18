@@ -20,6 +20,8 @@ export class ProductCardComponent implements OnInit {
   cartIcon = faCartPlus;
 
   addToCart(product){
+   event.stopPropagation();
+    console.log("Added this item to cart", product)
     this.cartService.addToCart(product);
     window.alert('Your product has been added to cart!')
   }
