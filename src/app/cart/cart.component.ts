@@ -18,7 +18,7 @@ export class CartComponent implements OnInit {
   onChange(event) {
    const inputValue = event.target.value;
    console.log(inputValue);
-   let totalString = document.getElementById('my-row').lastElementChild.innerHTML;
+   let totalString = document.getElementById('my-price').innerHTML;
    console.log(totalString);
    let totalNumber = parseInt(totalString); 
    console.log(totalNumber);
