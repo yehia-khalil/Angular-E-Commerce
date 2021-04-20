@@ -7,10 +7,27 @@ import {CartService} from '../cart.service'
 })
 export class CartComponent implements OnInit {
 
+  
+  
+
   items = this.cartService.getItems();
   constructor(
     private cartService: CartService
   ) { }
+
+  onChange(event) {
+   const inputValue = event.target.value;
+   console.log(inputValue);
+   let totalString = document.getElementById('my-row').lastElementChild.innerHTML;
+   console.log(totalString);
+   let totalNumber = parseInt(totalString); 
+   console.log(totalNumber);
+   
+   let quantity = inputValue * totalNumber; 
+   let quantityString = quantity.toString();
+   document.getElementById('my-row').lastElementChild.innerHTML = quantityString + " EUR";
+   
+  }
 
   ngOnInit(): void {
   }

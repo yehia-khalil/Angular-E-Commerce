@@ -8,7 +8,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let item of items">
+    <tr *ngFor="let item of items" id="my-row">
       <th scope="row">
         <span>
           <img class="card-img-top" src="{{ item.ProductPicUrl }}" alt="Card image cap" />
@@ -17,8 +17,8 @@
         {{item.Name }}
         </span>
       </th>
-      <td>{{item.Price}}{{item.CurrencyCode }}</td>
-      <td> <input type="text" class="form-control" placeholder="Quantity" aria-label="Username" aria-describedby="basic-addon1"></td>
+      <td id="my-price">{{item.Price}}</td>
+      <td> <input type="text" class="form-control" placeholder="Quantity" aria-label="Username" aria-describedby="basic-addon1"  (change)="onChange($event)"></td>
       <td>{{item.Price  }} {{item.CurrencyCode }}</td>
     </tr>
 
